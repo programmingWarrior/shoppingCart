@@ -77,6 +77,65 @@
          </div>
       </div>
    </section>
+
+
+   <script>
+
+      const mbPlusBtn =  document.getElementById("mb-plus-btn");
+      mbPlusBtn.addEventListener("click", function(){
+      
+      const mbChoice =  document.getElementById("mb-choice").value;
+      const mbChoiceNum = parseFloat(mbChoice);
+
+      const increasingCart = mbChoiceNum + 1;
+      document.getElementById("mb-choice").value = increasingCart;
+
+      const mbPrice = document.getElementById("mb-price").innerText;
+      const mbPriceNum = parseFloat(mbPrice);
+
+      const mbPriceCart = increasingCart * mbPriceNum;
+      document.getElementById("mb-price").innerText = mbPriceCart;
+
+
+
+
+      
+
+     })
+
+      const mbMinusBtn = document.getElementById("mb-minus-btn");
+      mbMinusBtn.addEventListener("click", function(){
+     
+      const mbChoice =  document.getElementById("mb-choice").value;
+      const mbChoiceNum = parseFloat(mbChoice);
+
+      if(mbChoiceNum > 0){
+         var decreasingCart = mbChoiceNum - 1;
+      }else if(mbChoiceNum == 0){
+         var decreasingCart = 0;
+      }
+
+      
+      document.getElementById("mb-choice").value = decreasingCart;
+
+      const mbPrice = document.getElementById("mb-price").innerText;
+      const mbPriceNum = parseFloat(mbPrice);
+
+      var mbPriceCart = decreasingCart * mbPriceNum;
+       document.getElementById("mb-price").innerText= mbPriceCart;
+
+
+
+      
+
+
+     })
+
+
+
+
+   </script>
 </body>
+
 
 </html>
