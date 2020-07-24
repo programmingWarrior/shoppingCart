@@ -86,6 +86,8 @@
       
       const mbChoice =  document.getElementById("mb-choice").value;
       const mbChoiceNum = parseFloat(mbChoice);
+     
+      
 
       const increasingCart = mbChoiceNum + 1;
       document.getElementById("mb-choice").value = increasingCart;
@@ -93,7 +95,8 @@
       const mbPrice = document.getElementById("mb-price").innerText;
       const mbPriceNum = parseFloat(mbPrice);
 
-      const mbPriceCart = increasingCart * mbPriceNum;
+      const newPrice = mbPriceNum + 1219;
+       document.getElementById("mb-price").innerText = newPrice;
       document.getElementById("mb-price").innerText = mbPriceCart;
 
       //sub total count start from here
@@ -125,27 +128,34 @@
       const mbChoice =  document.getElementById("mb-choice").value;
       const mbChoiceNum = parseFloat(mbChoice);
 
+      
+      
       if(mbChoiceNum > 0){
          var decreasingCart = mbChoiceNum - 1;
       }else if(mbChoiceNum == 0){
          var decreasingCart = 0;
       }
 
-      
       document.getElementById("mb-choice").value = decreasingCart;
 
       const mbPrice = document.getElementById("mb-price").innerText;
       const mbPriceNum = parseFloat(mbPrice);
 
-      var mbPriceCart = decreasingCart * mbPriceNum;
-       document.getElementById("mb-price").innerText= mbPriceCart;
-
-
-
+      const newPrice = mbPriceNum - 1219;
+       document.getElementById("mb-price").innerText = newPrice;
+   
+      if(newPrice > 1){
+         mbPriceNum = 0;
+      }
      })
 
 
+function ChoiceNum(id){
+   const mbChoice =  document.getElementById(id).value;
+   const mbChoiceNum = parseFloat(mbChoice);
+   return mbChoiceNum;
 
+}
 
 
 
