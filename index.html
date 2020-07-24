@@ -95,15 +95,15 @@
       const mbPrice = document.getElementById("mb-price").innerText;
       const mbPriceNum = parseFloat(mbPrice);
 
-      const newPrice = mbPriceNum + 1219;
-       document.getElementById("mb-price").innerText = newPrice;
+      const mbPriceCart = mbPriceNum + 1219;
+       
       document.getElementById("mb-price").innerText = mbPriceCart;
 
       //sub total count start from here
       const subTotalCount = document.getElementById("sub-total-count").innerText;
       const subTotalCountNum = parseFloat(subTotalCount);
 
-      const subtotal  = subTotalCountNum + mbPriceCart;
+      const subtotal  = subTotalCountNum + 1219;
 
       document.getElementById("sub-total-count").innerText = subtotal;
 
@@ -111,7 +111,7 @@
       const TotalCount = document.getElementById("total-count").innerText;
       const TotalCountNum = parseFloat(TotalCount);
 
-      const total  = TotalCountNum + mbPriceCart;
+      const total  = TotalCountNum + 1219;
 
       document.getElementById("total-count").innerText = total;
 
@@ -144,18 +144,31 @@
       const newPrice = mbPriceNum - 1219;
        document.getElementById("mb-price").innerText = newPrice;
    
-      if(newPrice > 1){
-         mbPriceNum = 0;
-      }
+     
+
+      const subTotalCount = document.getElementById("sub-total-count").innerText;
+      const subTotalCountNum = parseFloat(subTotalCount);
+
+      const subtotal  = subTotalCountNum - 1219;
+
+      document.getElementById("sub-total-count").innerText = subtotal;
+
+// total balance start from here
+      const TotalCount = document.getElementById("total-count").innerText;
+      const TotalCountNum = parseFloat(TotalCount);
+
+      const total  = TotalCountNum - 1219;
+
+      document.getElementById("total-count").innerText = total;
+
+      
      })
 
 
-function ChoiceNum(id){
-   const mbChoice =  document.getElementById(id).value;
-   const mbChoiceNum = parseFloat(mbChoice);
-   return mbChoiceNum;
+     //Cover item starting from here
 
-}
+    
+
 
 
 
